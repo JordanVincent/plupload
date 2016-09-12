@@ -1386,6 +1386,7 @@ plupload.Uploader = function(options) {
 				// Setup query string arguments
 				if (up.settings.send_chunk_number) {
 					args.chunk = Math.ceil(offset / chunkSize);
+					args.video_file_chunk_no = args.chunk;
 					args.chunks = Math.ceil(blob.size / chunkSize);
 				} else { // keep support for experimental chunk format, just in case
 					args.offset = offset;
